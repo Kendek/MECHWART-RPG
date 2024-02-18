@@ -4,5 +4,44 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/1Emelet.unity
+    guid: 4f514a30fe16bf449a75184b83ab3e32
+  - enabled: 1
+    path: Assets/Scenes/2Emelet.unity
+    guid: 9b54200805159284bac73461a46291f4
+  - enabled: 1
+    path: Assets/Scenes/35terem.unity
+    guid: b24f14a0009ce5a4999403e57522bf9c
+  - enabled: 1
+    path: Assets/Scenes/A1terem.unity
+    guid: e812fabed596f404fb9ec449741ad98f
+  - enabled: 1
+    path: "Assets/Scenes/Bej\xE1rat.unity"
+    guid: f34e69a2efc49ad4abc86be2d2320bb1
+  - enabled: 1
+    path: Assets/Scenes/Bufe.unity
+    guid: cd0b22e482b75be44bba3054243834a3
+  - enabled: 1
+    path: Assets/Scenes/FolyosoBoss.unity
+    guid: 82af8c45ca63b7347bdc9614a769848e
+  - enabled: 1
+    path: Assets/Scenes/FolyosoKonyvtar.unity
+    guid: e25a94af0e645e7409302069f198c9a7
+  - enabled: 1
+    path: "Assets/Scenes/K\xF6nyvt\xE1r.unity"
+    guid: 41760f70143c5a0458416fabf7efded0
+  - enabled: 1
+    path: "Assets/Scenes/Oroszl\xE1nBarlangja.unity"
+    guid: 789a69c251908414798573e11bedb0d0
+  - enabled: 1
+    path: Assets/Scenes/Pince.unity
+    guid: b3b3e5ec3f7d2c04192d95364b804e8e
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TitkosSzoba.unity
+    guid: 3ddf21688ecc31148b507458f7ee4a33
   m_configObjects: {}
