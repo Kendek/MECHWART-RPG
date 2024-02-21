@@ -4788,8 +4788,10 @@ MonoBehaviour:
   player: {fileID: 1330401812}
   PlayerIsAtThedoor: 0
   sceneName: Pince
-  playerPosition: {x: -2.27, y: 2.54}
+  playerPosition: {x: -1.95, y: 2.74}
   playerStorage: {fileID: 11400000, guid: 7939df90ac9b5b344ac228efb8aed119, type: 2}
+  black: {fileID: 1331896854}
+  anim: {fileID: 447908385}
 --- !u!212 &560788693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5397,8 +5399,10 @@ MonoBehaviour:
   player: {fileID: 1330401812}
   PlayerIsAtThedoor: 0
   sceneName: FolyosoKonyvtar
-  playerPosition: {x: -10.47, y: 0.15}
+  playerPosition: {x: -10.8, y: -0.57}
   playerStorage: {fileID: 11400000, guid: 7939df90ac9b5b344ac228efb8aed119, type: 2}
+  black: {fileID: 1331896854}
+  anim: {fileID: 447908385}
 --- !u!212 &968454428
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5941,8 +5945,10 @@ MonoBehaviour:
   player: {fileID: 1330401812}
   PlayerIsAtThedoor: 0
   sceneName: 1Emelet
-  playerPosition: {x: 5.1, y: 2.74}
+  playerPosition: {x: 4.68, y: 3.08}
   playerStorage: {fileID: 11400000, guid: 7939df90ac9b5b344ac228efb8aed119, type: 2}
+  black: {fileID: 1331896854}
+  anim: {fileID: 447908385}
 --- !u!212 &1161967349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6023,6 +6029,7 @@ GameObject:
   - component: {fileID: 1330401815}
   - component: {fileID: 1330401814}
   - component: {fileID: 1330401813}
+  - component: {fileID: 1330401818}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6066,8 +6073,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.11, y: 1.28}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 2.34375}
+    newSize: {x: 1, y: 2.34375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -6087,8 +6094,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a23c008e4e9151f46bdfe7a133f45a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 6
+  rb: {fileID: 1330401815}
   startingPosition: {fileID: 11400000, guid: 7939df90ac9b5b344ac228efb8aed119, type: 2}
+  animator: {fileID: 1330401818}
 --- !u!50 &1330401815
 Rigidbody2D:
   serializedVersion: 4
@@ -6157,12 +6166,12 @@ SpriteRenderer:
   m_SortingLayerID: -356642285
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dca98716b4267a147a96087c15ead833, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c598ada9261a04a44a0630632e4a0ecb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2.34375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -6177,12 +6186,33 @@ Transform:
   m_GameObject: {fileID: 1330401812}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 0.03, z: -0}
+  m_LocalPosition: {x: 0.05, y: -0.32, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1330401818
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330401812}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 52d5c64daf958134db18f9a670541070, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1331896851
 GameObject:
   m_ObjectHideFlags: 0

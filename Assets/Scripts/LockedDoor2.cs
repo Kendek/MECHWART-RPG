@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LockedDoor2 : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class LockedDoor2 : MonoBehaviour
     public Vector2 playerPosition;
     public VectorValue playerStorage;
     private static int kulcsfolyoso;
+
+    public Image black;
+    public Animator anim;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +35,7 @@ public class LockedDoor2 : MonoBehaviour
 
     public void changeScene()
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(Fading());
     }
 
 
@@ -47,5 +52,11 @@ public class LockedDoor2 : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         PlayerIsAtThedoor = false;
+    }
+    IEnumerator Fading()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a == 1);
+        SceneManager.LoadScene(sceneName);
     }
 }

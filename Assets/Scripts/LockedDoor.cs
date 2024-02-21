@@ -14,6 +14,9 @@ public class LockedDoor : MonoBehaviour
     public VectorValue playerStorage;
     private static int kulcs;
 
+    public Image black;
+    public Animator anim;
+
     void Start()    
     {
 
@@ -31,7 +34,7 @@ public class LockedDoor : MonoBehaviour
 
     public void changeScene()
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(Fading());
     }
 
 
@@ -48,5 +51,11 @@ public class LockedDoor : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         PlayerIsAtThedoor = false;
+    }
+    IEnumerator Fading()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a == 1);
+        SceneManager.LoadScene(sceneName);
     }
 }
