@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor;
 using UnityEngine.UI;
 
 public class Upgrade : MonoBehaviour
@@ -35,12 +34,15 @@ public class Upgrade : MonoBehaviour
     public GameObject dialog;
     public float maxxp = 0;
 
+    public GameObject visszavonGomb;
+
     // Start is called before the first frame update
     void Start()
     {
         xp= PlayerController.xp;
         maxxp = xp;
         xpInput.text = xp.ToString();
+        visszavonGomb.SetActive(false);
     }
 
     // Update is called once per frame
@@ -51,6 +53,7 @@ public class Upgrade : MonoBehaviour
     public void Onclick()
     {
         dialog.SetActive(false);
+        visszavonGomb.SetActive(false);
         PlayerMovement.speed = 5f;
         ero = 0;
         hp = 0;
@@ -58,6 +61,10 @@ public class Upgrade : MonoBehaviour
         chari = 0;
         aligi = 0;
         mana = 0;
+    }
+    public void bezarv()
+    {
+        visszavonGomb.SetActive(false);
     }
     public void RestartStat()
     {
@@ -84,7 +91,6 @@ public class Upgrade : MonoBehaviour
         PlayerController.charisma= charisValt;
         PlayerController.agility= agiliValt;
         PlayerController.maxmana= manaValt;
-        //PlayerController.xp=xp;
         eroInput.text = eroValt.ToString();
         hpInput.text = hpValt.ToString();
         dexInput.text = dexValt.ToString();
@@ -98,7 +104,6 @@ public class Upgrade : MonoBehaviour
     {
         if (xp <= 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Elfogyott az Xp-d", "Ok");
             vanxp = false;
         }
         else 
@@ -188,7 +193,7 @@ public class Upgrade : MonoBehaviour
         }
         else if (gombertek == 1 && ero == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
         if (gombertek == 2 && hp > 0)
         {
@@ -203,7 +208,7 @@ public class Upgrade : MonoBehaviour
         }
         else if (gombertek == 2 && hp == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
         if (gombertek == 3 && dex > 0)
         {
@@ -218,7 +223,7 @@ public class Upgrade : MonoBehaviour
         }
         else if (gombertek == 3 && dex == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
         if (gombertek == 4 && chari > 0)
         {
@@ -233,7 +238,7 @@ public class Upgrade : MonoBehaviour
         }
         else if (gombertek == 4 && chari == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
         if (gombertek == 5 && aligi > 0)
         {
@@ -248,7 +253,7 @@ public class Upgrade : MonoBehaviour
         }
         else if (gombertek == 5 && aligi == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
         if (gombertek == 6 && mana > 0)
         {
@@ -263,7 +268,7 @@ public class Upgrade : MonoBehaviour
         }
         else if (gombertek == 6 && mana == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
     }
 }

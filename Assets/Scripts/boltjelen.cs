@@ -1,9 +1,8 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor;
 
 public class boltjelen : MonoBehaviour
 {
@@ -13,10 +12,10 @@ public class boltjelen : MonoBehaviour
     public TMP_InputField BigManaPotionInput;
     public TMP_InputField coinInput;
 
-    public float khp;
-    public float nhp;
-    public float kman;
-    public float nman;
+    public float khp=0;
+    public float nhp=0;
+    public float kman=0;
+    public float nman=0;
 
     public GameObject bufe;
     public float SmallHpPotions;
@@ -25,18 +24,23 @@ public class boltjelen : MonoBehaviour
     public float BigManaPotions;
     public float coinGets;
 
+    public GameObject coinGomb;
+    public GameObject visszavonGomb;
+
     public bool vancoin;
     // Start is called before the first frame update
     void Start()
     {
         coinGets = PlayerController.coin;
         coinInput.text = coinGets.ToString();
+        coinGomb.SetActive(false);
+        visszavonGomb.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Onclick()
     {
@@ -47,12 +51,20 @@ public class boltjelen : MonoBehaviour
         kman = 0;
         nman = 0;
     }
+    public void bezarc()
+    {
+        coinGomb.SetActive(false);
+    }
+    public void bezarv()
+    {
+        visszavonGomb.SetActive(false);
+    }
 
     public void Novel(int gombertek)
     {
         if (coinGets <= 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Elfogyott a Coinod", "Ok");
+            coinGomb.SetActive(true);
             vancoin = false;
         }
         else
@@ -114,12 +126,13 @@ public class boltjelen : MonoBehaviour
             SmallHpPotionInput.text = SmallHpPotions.ToString();
             coinGets += 25;
             khp--;
+            Debug.Log(khp);
             coinInput.text = coinGets.ToString();
             PlayerController.coin = coinGets;
         }
         else if (gombertek == 1 && khp == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
         if (gombertek == 2 && nhp > 0)
         {
@@ -134,7 +147,7 @@ public class boltjelen : MonoBehaviour
         }
         else if (gombertek == 2 && nhp == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
         if (gombertek == 3 && kman > 0)
         {
@@ -149,7 +162,7 @@ public class boltjelen : MonoBehaviour
         }
         else if (gombertek == 3 && kman == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
         if (gombertek == 4 && nman > 0)
         {
@@ -164,7 +177,7 @@ public class boltjelen : MonoBehaviour
         }
         else if (gombertek == 4 && nman == 0)
         {
-            EditorUtility.DisplayDialog("Figyelem", "Nem tudsz többet visszavonni", "Ok");
+            visszavonGomb.SetActive(true);
         }
     }
 }
