@@ -5482,8 +5482,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1511560553}
   - component: {fileID: 1511560552}
-  - component: {fileID: 1511560551}
   - component: {fileID: 1511560550}
+  - component: {fileID: 1511560554}
   m_Layer: 0
   m_Name: TextShowColl
   m_TagString: kulcskonyvtar
@@ -5543,22 +5543,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1511560551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511560549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4fa734f8f356b64b81131e4726e0c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  letterPerSeconds: 20
-  dialogText: {fileID: 1754948651}
-  text: "Gratul\xE1lok! Most menj \xE9s k\xFCzdj meg a f\u0151 boss ellen!      [E]"
-  DialogObj: {fileID: 1900824853}
 --- !u!61 &1511560552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5619,6 +5603,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -85.937}
+--- !u!114 &1511560554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511560549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9b0fc230a5d6c4e8912021e570c22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterPerSeconds: 20
+  dialogText: {fileID: 1754948651}
+  text: "Gratul\xE1lok! Most menj \xE9s k\xFCzdj meg a f\u0151 boss ellen!      [E]"
+  DialogObj: {fileID: 1900824853}
 --- !u!1 &1593472143
 GameObject:
   m_ObjectHideFlags: 0

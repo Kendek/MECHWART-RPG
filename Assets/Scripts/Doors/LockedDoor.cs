@@ -31,10 +31,6 @@ public class LockedDoor : MonoBehaviour
         {
             changeScene();
         }
-        if (Input.GetKeyDown(KeyCode.F) && PlayerIsAtThedoor == true)
-        {
-            changeScene();
-        }
         if (Input.GetKeyDown(KeyCode.E) && PlayerIsAtThedoor == true && kulcs == 1 && PlayerController.Fight2Win ==1)
         {
             ChangeFaded();

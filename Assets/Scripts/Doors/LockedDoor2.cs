@@ -27,10 +27,6 @@ public class LockedDoor2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && PlayerIsAtThedoor == true)
-        {
-            changeScene();
-        }
         if (Input.GetKeyDown(KeyCode.E) && PlayerIsAtThedoor == true && kulcsfolyoso == 2)
         {
             changeScene();

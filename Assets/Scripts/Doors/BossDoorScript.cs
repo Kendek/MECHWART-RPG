@@ -39,10 +39,6 @@ public class BossDoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && PlayerIsAtThedoor == true)
-        {
-            changeScene();
-        }
         if (Input.GetKeyDown(KeyCode.E) && PlayerIsAtThedoor == true && kulcsfolyosoBoss == 3)
         {
             DialogObjBoss.SetActive(true);

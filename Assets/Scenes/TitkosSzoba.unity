@@ -3389,7 +3389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -425.69, y: -235.82}
+  m_AnchoredPosition: {x: -425.04, y: -235.82}
   m_SizeDelta: {x: 197.794, y: 117.9996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1377780803
@@ -3770,8 +3770,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1543779889}
   - component: {fileID: 1543779888}
-  - component: {fileID: 1543779887}
   - component: {fileID: 1543779886}
+  - component: {fileID: 1543779890}
   m_Layer: 0
   m_Name: TextShowColl
   m_TagString: kulcskonyvtar
@@ -3831,23 +3831,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1543779887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543779885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4fa734f8f356b64b81131e4726e0c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  letterPerSeconds: 20
-  dialogText: {fileID: 1661255562}
-  text: "Gratul\xE1lok! Most menj \xE9s pr\xF3b\xE1ld meg kinyitni a folyos\xF3 ajtaj\xE1t!   
-    [E]"
-  DialogObj: {fileID: 1171089670}
 --- !u!61 &1543779888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3908,6 +3891,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -59.583}
+--- !u!114 &1543779890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543779885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba171452b07bab4a93f40095794df6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterPerSeconds: 20
+  dialogText: {fileID: 1661255562}
+  text: "Gratul\xE1lok! Most menj \xE9s pr\xF3b\xE1ld meg kinyitni a folyos\xF3 ajtaj\xE1t!   
+    [E]"
+  DialogObj: {fileID: 1171089670}
 --- !u!1 &1593949479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4156,7 +4156,7 @@ Transform:
   m_GameObject: {fileID: 1770457405}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -427.21, y: -236.3, z: 20.846}
+  m_LocalPosition: {x: -426.88, y: -236.3, z: 20.846}
   m_LocalScale: {x: 0.9441476, y: 1.011131, z: 0.7459468}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/1Emelet.unity
-    guid: 4f514a30fe16bf449a75184b83ab3e32
+    path: Assets/Scenes/Menu.unity
+    guid: 8573fdcd0eece6943949b08bf3af0e40
   - enabled: 1
     path: Assets/Scenes/2Emelet.unity
     guid: 9b54200805159284bac73461a46291f4
@@ -56,4 +56,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fight3.unity
     guid: 2cced7a06d2c553418b9ea26df532d37
+  - enabled: 1
+    path: Assets/Scenes/1Emelet.unity
+    guid: 4f514a30fe16bf449a75184b83ab3e32
   m_configObjects: {}
